@@ -1,24 +1,11 @@
-print "hello world"
+# Main file running all tests/drivers for CSCI 3202 Assignment 1
 
-from DataStructures.MyQueue import MyQueue
-from DataStructures.BinaryTree import BinaryTree
+import unittest
+# Import as to enforce ordering in printing
+from DataStructures.TestMyQueue import TestMyQueue as Test01
+from DataStructures.TestMyStack import TestMyStack as Test02
+from DataStructures.TestBinaryTree import TestBinaryTree as Test03
+from DataStructures.TestGraph import TestGraph as Test04 
 
 if __name__ == "__main__":
-	bt = BinaryTree()
-	bt.add(2,None)
-	bt.add(3,2)
-	bt.add(4,2)
-	bt.add(5,2)
-	bt.add(6,4)
-	bt.print_tree()
-
-	bt.delete(6)
-	bt.print_tree()
-	
-	bt.delete(3)
-	bt.print_tree()
-	bt.delete(4)
-	bt.print_tree()
-	
-	bt.delete(2)
-	bt.print_tree()
+	unittest.main()

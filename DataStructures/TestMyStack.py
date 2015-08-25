@@ -4,15 +4,19 @@ from MyStack import MyStack
 
 class TestMyStack(unittest.TestCase):
 
-	s = MyStack()
+	def setUp(self):
+		print "=========== Running Stack Test ==========="
+		self.s = MyStack()
 	
-	print "=========== Running Stack Tests ==========="
+	def tearDown(self):
+		print "==========================================="
 
 	def test_push_appends(self):
 		self.s.push(1)
 		self.assertTrue(self.s.l.pop(), 1)
 
 	def test_pop_removes(self):
+		self.s.push(1)
 		self.s.l.append(1)
 		self.assertTrue(self.s.pop(), 1)
 

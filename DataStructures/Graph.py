@@ -5,6 +5,7 @@ class Graph():
 
 	def addVertex(self, value):
 		# Add a vertex with no edges to the graph
+		print "Attempting to add vertex with value %d" % value
 		if value in self.d:
 			print "Vertex already exists"
 		else:
@@ -12,6 +13,7 @@ class Graph():
 
 	def addEdge(self, value1, value2):
 		# Add an edge between two values in the graph
+		print "Attempting to add edge between %d and %d" % (value1, value2)
 		if value1 not in self.d or value2 not in self.d:
 			print "One or more vertices not found"
 		else:
@@ -19,6 +21,7 @@ class Graph():
 			self.d[value2].append(value1)
 		
 	def findVertex(self, value):
+		print "Attempting to find vertex %d" % value
 		v = self.d[value]
 		if v:
 			# For each adjacent vertex, print key

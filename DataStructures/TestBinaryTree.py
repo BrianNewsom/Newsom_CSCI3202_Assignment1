@@ -4,9 +4,12 @@ from BinaryTree import BinaryTree
 
 class TestBinaryTree(unittest.TestCase):
 
-	b = BinaryTree()
+	def setUp(self):
+		print "=========== Running BinaryTree Test ==========="
+		self.b = BinaryTree()
 	
-	print "=========== Running BinaryTree Tests ==========="
+	def tearDown(self):
+		print "================================================"
 
 	def test_add_integers_and_print(self):
 		self.b.add(1, None)

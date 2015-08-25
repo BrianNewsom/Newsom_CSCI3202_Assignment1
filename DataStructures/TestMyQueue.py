@@ -4,9 +4,13 @@ from MyQueue import MyQueue
 
 class TestMyQueue(unittest.TestCase):
 
-	q = MyQueue()
 	
-	print "=========== Running Queue Tests ==========="
+	def setUp(self):
+		print "=========== Running Queue Test ==========="
+		self.q = MyQueue()
+	
+	def tearDown(self):
+		print "==========================================="
 
 	def test_non_integer_raises_exception(self):
 		with self.assertRaises(Exception) as context:
