@@ -26,14 +26,11 @@ class TestMyQueue(unittest.TestCase):
 			self.q.put(i)
 			in_elements.append(i)
 		for i in range(0,10):
-			print "Popping %d from queue" % self.q.get()
-			out_elements.append(i)
+			popped = self.q.get()
+			out_elements.append(popped)
+			print "Popping %d from queue" % popped
+
 		self.assertEqual(in_elements, out_elements)
 	
-class TestMyStack(unittest.TestCase):
-
-	def test(self):
-		self.assertTrue(True)
-
 if __name__ == "__main__":
 	unittest.main()
