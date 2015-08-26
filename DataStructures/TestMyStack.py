@@ -12,15 +12,18 @@ class TestMyStack(unittest.TestCase):
 		print "==========================================="
 
 	def test_push_appends(self):
+		# Unit test of push command
 		self.s.push(1)
 		self.assertTrue(self.s.l.pop(), 1)
 
 	def test_pop_removes(self):
+		# Unit test of pop command
 		self.s.push(1)
 		self.s.l.append(1)
 		self.assertTrue(self.s.pop(), 1)
 
 	def test_10_elements(self):
+		# Comprehensive test, add and remove 10 elements, ensure they are popped in the correct order for a stack
 		in_elements = []
 		out_elements = []
 

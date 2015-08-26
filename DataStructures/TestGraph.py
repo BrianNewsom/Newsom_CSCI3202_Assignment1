@@ -13,6 +13,7 @@ class TestGraph(unittest.TestCase):
 		print "==========================================="
 
 	def test_add_vertices_and_edges(self):
+		# Create graph with 10 vertices and 20 edges, then find 5 vertices and print their neighbors
 		g = self.g
 		for i in range(1,11):
 			g.addVertex(i)
@@ -25,11 +26,13 @@ class TestGraph(unittest.TestCase):
 			g.findVertex(i)
 		
 	def test_add_vertex_adds_to_dict(self):
+		# Add vertex then ensure it is added to the underlying dictionary
 		g = self.g
 		g.addVertex(1)
 		self.assertEqual(g.d[1], [])
 
 	def test_add_vertex_then_edge_creates_bidirectional_edges(self):
+		# Add vertices and edge then make sure the edges are created in both vertices lists
 		g = self.g
 		g.addVertex(1)
 		g.addVertex(2)
