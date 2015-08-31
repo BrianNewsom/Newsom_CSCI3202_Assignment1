@@ -21,6 +21,7 @@ class Graph():
 			self.d[value2].append(value1)
 		
 	def findVertex(self, value):
+		# Find vertex and print all adjacent vertices if found
 		print "Attempting to find vertex %d" % value
 		v = self.d[value]
 		if v:

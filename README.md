@@ -13,6 +13,8 @@ All tests proposed in the pdf are included, and should be clear from the printin
 these are commented as the comprehensive (or integration-like) tests.  Additional tests are added to further
 test the features of the data structures.
 
+For further information on the unit tests, see the documentation for built in Python UnitTest Framework at [https://docs.python.org/2/library/unittest.html](https://docs.python.org/2/library/unittest.html).
+
 In order to use the data structures in a non-test environment, simply import all non test files inside of the DataStructures
 directory. e.g.
 ```

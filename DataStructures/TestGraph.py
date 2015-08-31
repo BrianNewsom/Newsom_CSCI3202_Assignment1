@@ -14,6 +14,9 @@ class TestGraph(unittest.TestCase):
 
 	def test_add_vertices_and_edges(self):
 		# Create graph with 10 vertices and 20 edges, then find 5 vertices and print their neighbors
+		# State before: Empty Graph
+		# State after: Graph with 10 vertices and 20 edges
+
 		g = self.g
 		for i in range(1,11):
 			g.addVertex(i)
@@ -27,12 +30,18 @@ class TestGraph(unittest.TestCase):
 		
 	def test_add_vertex_adds_to_dict(self):
 		# Add vertex then ensure it is added to the underlying dictionary
+		# State before: Empty Graph
+		# State after: Graph with one vertex
+
 		g = self.g
 		g.addVertex(1)
 		self.assertEqual(g.d[1], [])
 
 	def test_add_vertex_then_edge_creates_bidirectional_edges(self):
 		# Add vertices and edge then make sure the edges are created in both vertices lists
+		# State before: Empty Graph
+		# State after: Graph with vertex and bidirectional edge
+		
 		g = self.g
 		g.addVertex(1)
 		g.addVertex(2)

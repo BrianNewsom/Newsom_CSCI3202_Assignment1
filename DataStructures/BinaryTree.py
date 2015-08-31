@@ -26,6 +26,7 @@ class BinaryTree:
 			return self.add_recursive(head.left, value, parent_value) or self.add_recursive(head.right, value, parent_value)
 
 	def add(self, value, parent_value):
+		# Wraps add_recursive so that we begin at the root
 		print "Attempting to add %s under %s" % (value, parent_value)
 		if self.root is None:
 			self.root = Node(None, value)
@@ -34,11 +35,13 @@ class BinaryTree:
 				print "Parent not found"
 
 	def delete(self, value):
+		# Wraps delete_recursive so we begin at the root
 		print "Attempting to delete %s" % value
 		if not self.delete_recursive(self.root, value):
 			print "Node not found"
 
 	def delete_recursive(self, head, value):
+		# Recursively remove a node in the BT given the logic in the pdf
 		if head is None:
 			return False
 		
@@ -68,7 +71,7 @@ class BinaryTree:
 			self.print_rec(self.root)
 
 	def print_rec(self, head):
-		# Perform in order traversal
+		# Perform pre-order traversal
 		print head.key
 		if head.left:
 			self.print_rec(head.left)

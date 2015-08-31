@@ -13,6 +13,8 @@ class TestBinaryTree(unittest.TestCase):
 
 	def test_add_integers_and_print(self):
 		# Run by unittest - adds 10 nodes in tree, then prints to display they were added correctly
+		# State before: Empty tree
+		# State after: Tree with 10 nodes
 		self.b.add(1, None)
 		self.b.add(2, 1)
 		self.b.add(3, 1)
@@ -28,6 +30,8 @@ class TestBinaryTree(unittest.TestCase):
 		
 	def test_delete_and_print(self):
 		# Run by unittest - adds 10 nodes in tree, deletes 2, then prints to ensure they are correctly deleted
+		# State before: Empty tree
+		# State after: Tree with 8 nodes
 		self.b.add(1, None)
 		self.b.add(2, 1)
 		self.b.add(3, 1)
